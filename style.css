@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root{
+    --Pale-Violet:hsl(276, 100%, 81%);
+    --chat-on-the-left:hsl(276, 55%, 52%);
+    --chat-on-the-right:hsl(271, 15%, 43%);
+    --placeholder-text:hsl(206, 6%, 79%);
+    --main-heading:hsl(271, 36%, 24%);
+    --paragraph:hsl(270, 7%, 64%);
+    --gradient1: hsl(293, 100%, 63%);
+    --gradient2: hsl(264, 100%, 61%);
+    --app-background: hsl(270, 20%, 96%);
+}
+
+body{
+    background-color: hsl(270, 20%, 96%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-bg{
+    width: 35%;
+    height: 40rem;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-image: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: -8rem;
+}
+
+.right-bg{
+    width: 35%;
+    height: 40rem;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    background-image: linear-gradient(to bottom, hsla(264.1, 100%, 61%, 0.04), hsla(293, 100%, 62.9%, 0.04));
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: -8rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 8rem;
+}
+
+.mobile{
+    width: 17rem;
+    height: 34rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 8px 32px 30px hsla(275.9, 100%, 81%, 0.48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    position: relative;
+}
+
+.mobile::after{
+    content: "";
+    width: 9rem;
+    height: 2rem;
+    background-color: #fff;
+    display: block;
+    top: 0;
+    position: absolute;
+    border-radius: 2rem;
+}
+
+.mobile:hover{
+    transform: scale(1.02);
+}
+
+.mobile-2{
+    width: 16rem;
+    height: 32.6rem;
+    background-color: var(--app-background);
+    position: relative;
+    border-radius: 2rem;
+}
+
+ion-icon {
+    color: white;
+}
+
+.three-dot{
+    margin-left: 4rem;
+}
+
+.top-profile img{
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.top-prf-2{
+    display: flex;
+    position: absolute;
+    top: 44%;
+    left: 2%;
+    gap: .5rem;
+    align-items: center;
+}
+
+.prof-info p:nth-child(1){
+    color: #fff;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.prof-info p:nth-child(2){
+    font-size: .6rem;
+    color: var(--placeholder-text);
+}
+
+.top-profile{
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%)) ;
+    display: flex;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    height: 4rem;
+    position: relative;
+}
+
+.top-chat{
+    padding: .5rem 0 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.chat-1, .chat-2, .chat-5{
+    background-color: hsla(205.7, 6.5%, 79%, 0.45);
+    width: 60%;
+    padding: .5rem;
+    color: var(--main-heading);
+    border-top-right-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+    border-top-left-radius: .7rem;
+    border-bottom-left-radius: .2rem;
+}
+
+.chat-1, .chat-2, .chat-3, .chat-4, .chat-5{
+    font-size: .6rem;
+    color: var(--chat-on-the-left);
+}
+
+.middle-chat{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    padding: .5rem .5rem 0 0;
+    align-items: end;
+}
+
+.dog-images{
+    display: flex;
+    gap: .5rem;
+    width: fit-content;
+    float: right;
+}
+
+.dog-images img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: .7rem;
+}
+
+.chat-3, .chat-4{
+    border-top-left-radius: .7rem;
+    border-bottom-left-radius: .7rem;
+    border-top-right-radius: .7rem;
+    border-bottom-right-radius: .2rem;
+    background-color: #fff;
+    width: 61%;
+    padding: .5rem;
+    color: var(--main-heading);
+    float: right;
+    box-shadow: 5px 6px 3px #80808014;
+}
+
+.bottom-chat{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    padding: .5rem 0 0 .5rem;
+}
+
+.chat-6, .chat-7{
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    padding: .6rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+    border-top-right-radius: .7rem;
+    border-bottom-left-radius: .2rem;
+    width: 80%;
+    gap: .5rem;
+}
+
+.circle{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 2px solid #dcdcdc6b;
+}
+
+.chat-6 p:nth-child(2){
+    font-size: .6rem;
+}
+
+.chat-6 p:nth-child(3){
+    font-weight: 500;
+    margin-left: 2rem;
+}
+
+.chat-7 p:nth-child(2){
+    font-size: .6rem;
+}
+
+.chat-7 p:nth-child(3){
+    font-weight: 500;
+    margin-left: 3.5rem;
+}
+
+.messg{
+    padding-right: .5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"]{
+    padding: .7rem;
+    width: 100%;
+    border: none;
+    border-radius: 5rem;
+}
+
+input[type="text"]::placeholder{
+    color: var(--placeholder-text);
+}
+
+.dot{
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background-color: var(--main-heading);
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forward{
+    font-size: 1.3rem;
+}
+
+.right{
+    width: 28rem;
+}
+
+.right h1{
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: var(--main-heading);
+}
+
+.right p{
+    color: var(--paragraph);
+    line-height: 1.5rem;
+}
+
+/* ------------ MEDIA QUERY SECTION ----------- */
+
+@media (max-width: 929px){
+
+    .container{
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 857px){
+
+    .container{
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .right{
+        width: 25rem;
+    }
+
+    .left-bg{
+        left: -50%;
+        height: 28rem;
+        width: 100%;
+    }
+
+    .right-bg{
+        right: -50%;
+        width: 100%;
+        height: 22rem;
+    }
+}
+
+@media (max-width: 446px){
+
+    .right{
+        width: 20rem;
+    }
+}
